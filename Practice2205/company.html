@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Company</title>
+    
+    <style>
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        aside {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background: gold;
+            transform: translateX(-250px);
+            transition: 1s;
+        }
+
+        aside.is-open {
+            transform: translateX(0);
+        }
+    </style>
+    <script>
+        function toggle_menu() {
+            const sidebar = document.querySelector('aside');
+            sidebar.classList.toggle('is-open');
+        }
+    </script>
+</head>
+<body>
+    <aside></aside>
+    <div class="row">
+        <h1>
+            About Company
+        </h1>
+
+        <button onclick="toggle_menu()">Menu</button>
+    </div>
+</body>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos corporis aut ipsam voluptatibus quo aliquid dolorum, illum impedit doloremque fugiat reprehenderit at asperiores adipisci pariatur nisi eaque? Ab, architecto rem.
+</p>
+</html>
